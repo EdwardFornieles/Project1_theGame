@@ -9,7 +9,7 @@
 ===============================================================================
 
 WIREFRAME
-
+![Preview](https://raw.githubusercontent.com/DonmRe/Project1_theGame/master/Assets/media/welcome.png)
 ![welcome](welcome.jpg)
 
 link= "./Assets/welcome.jpg"
