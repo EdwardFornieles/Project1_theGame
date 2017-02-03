@@ -10,7 +10,7 @@
 
 WIREFRAME
 
-![alt tag](https://raw.githubusercontent.com/DonmRe/Project1_theGame/Assets/media/welcome.jpg)
+![welcome](welcome.jpg)
 
 link= "./Assets/welcome.jpg"
 ![](./Assets/thekick.jpg;base64,<image converted to base64)
