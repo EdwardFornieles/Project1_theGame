@@ -4,7 +4,7 @@
 *******************************************************************************
 ===============================================================================
 *******************************************************************************
-============================ PENALTY KICKS!!!!=================================
+================================ PENALTY KICKS!!!!=============================
 *******************************************************************************
 ===============================================================================
 
@@ -14,9 +14,8 @@ The minimum project requirements are
   - Allow the player to select a team
   - Allow the player to kick a penalty kick
   - Allow the player to switch turns after every shoot
-  - Allow the keeper to save a shoot
-  - keep an accurate score record
-  - Inform when a player wins the game
+  - keep an accurate score record(first in get a solid advantage after 5 shoots)
+  - Inform when a player wins the game and reset the game
 
 
 ** Stretch goals
@@ -26,6 +25,7 @@ The minimum project requirements are
 - Improve background display and sound effects to create a better 'atmosphere' for
   the game.
 
+  - Allow the player use the keeper to save a shoot
 
 
 ** TECHNOLOGIES TO BE USE
@@ -34,7 +34,7 @@ The minimum project requirements are
 - CSS (including @media)
 - Some vanilla JavaScript and JQuery
 - Final Cut
-- Microsoft
+- Microsoft Office
 
 
 
