@@ -9,10 +9,10 @@
 ===============================================================================
 
 WIREFRAME
-![](data:Assets/welcome.jpg;base64,<image converted to base64)
-![](data:Assets/thekick.jpg;base64,<image converted to base64)
-![](data:Assets/celebration.jpg;base64,<image converted to base64)
-![](data:Assets/finalScore.jpg;base64,<image converted to base64)
+![](./Assets/welcome.jpg;base64,<image converted to base64)
+![](./Assets/thekick.jpg;base64,<image converted to base64)
+![](./Assets/celebration.jpg;base64,<image converted to base64)
+![](./Assets/finalScore.jpg;base64,<image converted to base64)
 
 
 ***MVP
