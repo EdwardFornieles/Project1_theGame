@@ -9,13 +9,11 @@
 ===============================================================================
 
 WIREFRAME
-![Preview](https://raw.githubusercontent.com/DonmRe/Project1_theGame/master/Assets/media/welcome.png)
-![welcome](welcome.jpg)
 
-link= "./Assets/welcome.jpg"
-![](./Assets/thekick.jpg;base64,<image converted to base64)
-![](./Assets/celebration.jpg;base64,<image converted to base64)
-![](./Assets/finalScore.jpg;base64,<image converted to base64)
+![Welcome Screen](http://i.imgur.com/gdIKImY.jpg)
+![The Kick](http://i.imgur.com/ry27oj8.jpg)
+![Celebration](http://i.imgur.com/WRIj8II.jpg)
+![Final Score](http://i.imgur.com/AzCsdWv.jpg)
 
 
 ***MVP
