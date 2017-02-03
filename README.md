@@ -9,7 +9,7 @@
 ===============================================================================
 
 WIREFRAME
-![](./Assets/welcome.jpg;base64,<image converted to base64)
+link= "./Assets/welcome.jpg"
 ![](./Assets/thekick.jpg;base64,<image converted to base64)
 ![](./Assets/celebration.jpg;base64,<image converted to base64)
 ![](./Assets/finalScore.jpg;base64,<image converted to base64)
