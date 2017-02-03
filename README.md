@@ -1,5 +1,6 @@
-# PROJECT 1 PENALTY KICKS!
+### PROJECT 1
 
+#*PENALTY KICKS!*
 
 *******************************************************************************
 ===============================================================================
@@ -10,30 +11,36 @@
 
 
 
-#WIREFRAME
+#WIREFRAME#
 
-**Welcome**
+<br>
+***Welcome***
 ![Welcome Screen](http://i.imgur.com/gdIKImY.jpg)
 
-**The Kick**
+***The Kick***
 ![The Kick](http://i.imgur.com/ry27oj8.jpg)
 
-**Celebration**
+***Celebration***
 ![Celebration](http://i.imgur.com/WRIj8II.jpg)
 
-**Final Score**
+***Final Score***
 ![Final Score](http://i.imgur.com/AzCsdWv.jpg)
 
 
+
+
 #USER STORIES
+<br>
 
 **Check out our trello board**
- ![trello](https://trello.com/b/lbkkZHK9/wdi43-project1-penaltykicks)
 
-
-
+ *https://trello.com/b/lbkkZHK9/wdi43-project1-penaltykicks*
+ 
+ 
 
 #MVP
+<br>
+
 **The minimum project requirements are**
 	
   - Allow the player to **select a team**
@@ -47,6 +54,7 @@
 
 
 ## Stretch goals
+<br>
 
 - Develop a player's better interaction with the ball, kick, goal and goalie
 
@@ -57,19 +65,19 @@
 
 
 ## TECHNOLOGIES TO BE USE
-
+<br>
 - HTML
 - CSS (including @media)
 - Some vanilla JavaScript and JQuery
 - Final Cut
 - Microsoft Office
 
-
+<br>
 ### EXTRAS
- **FOR MORE INFO https://en.wikipedia.org/wiki/Penalty_kick_(association_football)
+ *FOR MORE INFO https://en.wikipedia.org/wiki/Penalty_kick_(association_football)*
 
- **lego https://www.youtube.com/watch?v=a1gWemn7O70&t=15s
+ *An idea https://www.youtube.com/watch?v=a1gWemn7O70&t=15s*
 
- ** broadcast https://www.youtube.com/watch?v=4r4Dyc7d2To
-
- **TRELLO BOARD
+ *broadcast https://www.youtube.com/watch?v=4r4Dyc7d2To*
+<br>
+ 
