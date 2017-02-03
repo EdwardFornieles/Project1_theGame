@@ -10,25 +10,29 @@
 
 
 
-
+<br>
 #WIREFRAME#
+<br>
 
 <br>
 ***Welcome***
 ![Welcome Screen](http://i.imgur.com/gdIKImY.jpg)
 
+<br>
 ***The Kick***
 ![The Kick](http://i.imgur.com/ry27oj8.jpg)
 
+<br>
 ***Celebration***
 ![Celebration](http://i.imgur.com/WRIj8II.jpg)
 
+<br>
 ***Final Score***
 ![Final Score](http://i.imgur.com/AzCsdWv.jpg)
+<br>
 
 
-
-
+<br>
 #USER STORIES
 <br>
 
@@ -37,7 +41,7 @@
  *https://trello.com/b/lbkkZHK9/wdi43-project1-penaltykicks*
  
  
-
+<br>
 #MVP
 <br>
 
@@ -52,7 +56,7 @@
   - keep an accurate **score record** (5 shoots per player)
   - Inform when a **player wins** the game and **reset** the game
 
-
+<br>
 ## Stretch goals
 <br>
 
@@ -63,9 +67,10 @@
   
 - Allow the player use the keeper to save a shoot
 
-
+<br>
 ## TECHNOLOGIES TO BE USE
 <br>
+
 - HTML
 - CSS (including @media)
 - Some vanilla JavaScript and JQuery
@@ -74,6 +79,8 @@
 
 <br>
 ### EXTRAS
+<br>
+
  *FOR MORE INFO https://en.wikipedia.org/wiki/Penalty_kick_(association_football)*
 
  *An idea https://www.youtube.com/watch?v=a1gWemn7O70&t=15s*
