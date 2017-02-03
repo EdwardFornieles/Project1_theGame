@@ -1,5 +1,5 @@
 # Project1_theGame
-<!--
+
 
 *******************************************************************************
 ===============================================================================
@@ -8,12 +8,8 @@
 *******************************************************************************
 ===============================================================================
 
-// FOR MORE INFO https://en.wikipedia.org/wiki/Penalty_kick_(association_football)
 
-// TRELLO BOARD
-https://trello.com/b/lbkkZHK9/wdi43-project1
-
-// MVP
+***MVP
 The minimum project requirements are
   - Allow the player to select a team
   - Allow the player to kick a penalty kick
@@ -23,7 +19,7 @@ The minimum project requirements are
   - Inform when a player wins the game
 
 
-// Stretch goals
+** Stretch goals
 
 - Develop a player's better interaction with the ball, kick, goal and goalie
 
@@ -32,15 +28,21 @@ The minimum project requirements are
 
 
 
-// TECHNOLOGIES TO BE USE
+** TECHNOLOGIES TO BE USE
 
 - HTML
 - CSS (including @media)
 - Some vanilla JavaScript and JQuery
 - Final Cut
-- Microsoft 
+- Microsoft
 
 
 
+ **FOR MORE INFO https://en.wikipedia.org/wiki/Penalty_kick_(association_football)
 
- -->
+ **lego https://www.youtube.com/watch?v=a1gWemn7O70&t=15s
+
+ ** transmision https://www.youtube.com/watch?v=4r4Dyc7d2To
+
+ **TRELLO BOARD
+ https://trello.com/b/lbkkZHK9/wdi43-project1
