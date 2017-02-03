@@ -8,6 +8,12 @@
 *******************************************************************************
 ===============================================================================
 
+WIREFRAME
+![](data:Assets/welcome.jpg;base64,<image converted to base64)
+![](data:Assets/thekick.jpg;base64,<image converted to base64)
+![](data:Assets/celebration.jpg;base64,<image converted to base64)
+![](data:Assets/finalScore.jpg;base64,<image converted to base64)
+
 
 ***MVP
 The minimum project requirements are
