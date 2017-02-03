@@ -9,6 +9,9 @@
 ===============================================================================
 
 WIREFRAME
+
+![alt tag](https://raw.githubusercontent.com/DonmRe/Project1_theGame/Assets/media/welcome.jpg)
+
 link= "./Assets/welcome.jpg"
 ![](./Assets/thekick.jpg;base64,<image converted to base64)
 ![](./Assets/celebration.jpg;base64,<image converted to base64)
