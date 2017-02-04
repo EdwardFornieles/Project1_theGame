@@ -1,0 +1,14 @@
+#timer {
+  height:100px;
+  width: 50px;
+  border: 2px solid black;
+  position: relative;
+  background: red;
+}
+
+#kickTime {
+  height:100%;
+  width: 100%;
+  background: white;
+  position: absolute;
+}
