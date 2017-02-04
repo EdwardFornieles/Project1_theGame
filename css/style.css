@@ -1,6 +1,5 @@
 body {
   background-image: url('http://i.imgur.com/6Zuf7Jt.jpg');
-  display: ;
   margin: 0 auto;
   height: 100%;
   width: 100%;
@@ -14,7 +13,7 @@ body {
   background: red;
 }
 
-#kickTime {
+#shoot {
   height:100%;
   width: 100%;
   background: white;

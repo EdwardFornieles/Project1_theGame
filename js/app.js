@@ -1,5 +1,30 @@
 $( document ).ready(function(){
 
+///////////////////////////////////////////////////////////////////////////////
+////////////////////        SECOND ATTEMPT          ///////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+
+var $shoot = false
+var $kick = $('#shoot')
+// for(var i=0; i<$kick.length; i++)
+//  if ($shoot === false ){
+$('#btn').on('click', function(){
+  ($kick).animate({height:'0%'}, 10000)
+})
+// goal()
+// }
+$('#btn2').click(function(){
+  $('#shoot').stop()})
+// console.log('you missed your shoot')
+// })
+// console.log('goal!')
+
+// var $shoot = true
+// }
+
+
+
+
 
 
 
