@@ -16,15 +16,35 @@ var $container = $('#timer')
 
 
  //
- var $kick = false
  //  var $turn = function turn(){
-  if($kick === false){
-  $('#shoot').on('click', function kicking(){
-    ($time).animate({height:'0%'}, 500);
-    kicking.stop()})
+if($kick === false){
+  var $kick = false
+    $('#shoot').on('click', function kicking(){
+    $('#kickTime').animate({height:'0%'}, 5000)})
+    animate.stop()
+
+    console.log('you miss the shoot!')
+
+
+} else if ($kick === true){
+
+    console.log('you win!')
 }
+    $('#shoot').on('click', function goal(){
+    $('kickTime').stop()})
+{
+    $kick = true
+}
+
+
+
+    // what to do if the value of $kick is true?????
+
+
+    // kicking.stop()})
+
   // } else if ($kick === true) {
-    console.log("That's a goal!")
+    // console.log("That's a goal!")
   // } $kick = true
 
 // } else {
