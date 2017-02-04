@@ -14,20 +14,24 @@ var $container = $('#timer')
 // when the button is hit again it will determine based on height
 // if the shoot is a goal or a miss
 
-var $kick = false
 
-  var $turn = function turn(){
+ //
+ var $kick = false
+ //  var $turn = function turn(){
   if($kick === false){
-  $('#shoot').on('click', function kicking()
-  {
-    ($time).animate({height:'0%'}, 500)
-    console.log('Time is up, you miss')})
-  }
+  $('#shoot').on('click', function kicking(){
+    ($time).animate({height:'0%'}, 500);
+    kicking.stop()})
+}
+  // } else if ($kick === true) {
+    console.log("That's a goal!")
+  // } $kick = true
+
 // } else {
 
 
 
-}
+// }
   //  $('#shoot').stop()
 // and an if else to run the turn function with original value of false
 
