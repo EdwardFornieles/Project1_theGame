@@ -4,17 +4,46 @@ $( document ).ready(function(){
 ////////////////////        SECOND ATTEMPT          ///////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 
-var $shoot = false
-var $kick = $('#shoot')
-// for(var i=0; i<$kick.length; i++)
-//  if ($shoot === false ){
-$('#btn').on('click', function(){
-  ($kick).animate({height:'0%'}, 10000)
-})
-// goal()
-// }
+// var $shoot = false
+var $timer = $('#timer')
+// var $turn = function turn (){
+var $beforeKick = $('#shoot')
+
+  //
+  // function takeTurns(){$('#btn').on('click', function(){
+  //
+  //   ($beforeKick).animate({height:'100%'}, 7)
+
+
+
+  //turn variable created to be activated after a begin/reset
+//======================================
+  var $kick = $('#shoot')
+
+  $('#btn').on('click', function(){
+  ($kick).animate({height:'0%'}, 3000)
+
+//======================================
 $('#btn2').click(function(){
-  $('#shoot').stop()})
+
+  ($kick).stop()
+ var result = (($timer.height()/$kick.height())*100)
+if(result<95){
+  console.log(result + "    you missed it!")}
+else{
+  console.log(result + "    It's a goal!")}
+
+})
+})
+
+
+
+//trying to set a reset function  for the turn
+
+// }
+// })
+
+
 // console.log('you missed your shoot')
 // })
 // console.log('goal!')
