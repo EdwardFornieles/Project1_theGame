@@ -1,21 +1,31 @@
 body {
-  background-image: url('http://i.imgur.com/6Zuf7Jt.jpg');
+  background-image: url('http://i.imgur.com/A8foSNC.png');
   margin: 0 auto;
   height: 100%;
   width: 100%;
+}
+
+#player {
+  background-image: url();
 }
 
 #timer {
   height:100px;
   width: 50px;
   border: 2px solid black;
-  position: relative;
+  position: absolute;
   background: red;
 }
 
 #shoot {
-  height:100px;
+  height:0%;
   width: 100%;
   background: white;
-  position: absolute;
+  position: relative;
+}
+#range {
+  height: 70%;
+  widows: 5%;
+  background: green;
+  position: relative;
 }

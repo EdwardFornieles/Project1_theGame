@@ -4,34 +4,26 @@ $( document ).ready(function(){
 ////////////////////        SECOND ATTEMPT          ///////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 
-// var $shoot = false
+////****    GLOBAL VARIABLES    *****////
 var $timer = $('#timer')
-// var $turn = function turn (){
 var $beforeKick = $('#shoot')
 
-  //
-  // function takeTurns(){$('#btn').on('click', function(){
-  //
-  //   ($beforeKick).animate({height:'100%'}, 7)
 
+////****    FUNCTIONS     *****////
 
-
-  //turn variable created to be activated after a begin/reset
 //======================================
   var $kick = $('#shoot')
-
   $('#btn').on('click', function(){
-  ($kick).animate({height:'0%'}, 3000)
+  ($kick).animate({height:'100%'}, 600)
 
 //======================================
 $('#btn2').click(function(){
-
-  ($kick).stop()
- var result = (($timer.height()/$kick.height())*100)
-if(result<95){
-  console.log(result + "    you missed it!")}
+($kick).stop()
+var result = (($timer.height()/$kick.height())*100)
+if(result<3000){
+console.log(result + "    you missed it!")}
 else{
-  console.log(result + "    It's a goal!")}
+console.log(result + "    It's a goal!")}
 
 })
 })
@@ -39,54 +31,6 @@ else{
 
 
 //trying to set a reset function  for the turn
-
-// }
-// })
-
-
-// console.log('you missed your shoot')
-// })
-// console.log('goal!')
-
-// var $shoot = true
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
