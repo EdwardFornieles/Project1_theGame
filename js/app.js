@@ -7,26 +7,32 @@ $( document ).ready(function(){
 ////****    GLOBAL VARIABLES    *****////
 var $timer = $('#timer')
 var $beforeKick = $('#shoot')
+var kicked = false
 
 
 ////****    FUNCTIONS     *****////
 
-//======================================
-  var $kick = $('#shoot')
+//==
+for(kicked === false) { {
   $('#btn').on('click', function(){
-  ($kick).animate({height:'100%'}, 600)
+  ($kick).animate({height:'100%'}, 600);
+})
+  console.log(result + "    you missed it!")
 
-//======================================
-$('#btn2').click(function(){
-($kick).stop()
+}
+
+else if (kicked === true ) {
+  $('#btn2').click(function(){
+($kick).stop();
+})
+var kicked =true
 var result = (($timer.height()/$kick.height())*100)
-if(result<3000){
-console.log(result + "    you missed it!")}
-else{
-console.log(result + "    It's a goal!")}
+if(result<3000)
 
-})
-})
+  console.log(result + "    It's a goal!")
+ }
+  ($kick).animate({height:'0%'}, 60);
+}
 
 
 
