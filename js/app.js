@@ -6,43 +6,50 @@ $( document ).ready(function(){
 ///////////////////////////////////////////////////////////////////////////////
 
 
+  //                         ¯\(°_o)/¯
 
 
 
 
+//////////********** GLOBAL VARIABLES **********////////////
+//
+// var $timer = $('#timer')
+// var $shoot = $('#shoot')
+// var $ready = $('#btn')
+// var $kickIt = $('#btn2')
+// var $score = [0,0,0,0,0,0,0,0,0,0]
+// var kick = false
+//
+//
+// //////////**********    FUNCTIONS     **********////////////
+//
+// // for(var i = 0; i<$score.length; i++){
+// // if (kick === false) {
+//   ($ready).on('click', (($shoot).animate({height:'100%'}, 600)))
+// // }
+//   // console.log ('you missed the shoot!')
+//
+//   // } else if( kick === true ) {
+//     ($kickIt).on('click', ($shoot).stop())
+//     console.log ('you shoot!')
+//
+//   var result = (($timer.height/$shoot.height)*100)
+//
+//   if(result<95){
+//   console.log('the goalkeeper catched it!')
+//   }
+//   else if (result>95) {
+//   console.log("It's a goal!")
+//   }
+//   // kick = true
+//
+//
+//
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//
+// else if (kick=== true) {
+//
+// }
 
 
 
@@ -52,43 +59,81 @@ $( document ).ready(function(){
 ////////////////////        SECOND ATTEMPT          ///////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 
-////****    GLOBAL VARIABLES    *****////
-// var $timer = $('#timer')
-// var $kick = $('#shoot')
-// var $score = 0
-// var kicked = false
-// var result = (($timer.height()/$kick.height())*100)
+//****    GLOBAL VARIABLES    *****////
+var $timer = $('#timer')
+var $kick = $('#shoot')
+var turn = 1
+var player1 = {
+    team: 'home',
+    score: 0,
+    scoreBoard: $('#player1Score')
+  }
+var player2 = {
+    team: 'away',
+    score: 0,
+    scoreBoard: $('#player2Score')
+  }
+var $score = player1.scoreBoard() && player2.scoreBoard()
+var kicked = false
+var result = (($timer.height()/$kick.height())*100)
+
+////****    FUNCTIONS     *****////
+
+// player.score / score.player =
+
+
+
+newShoot()
+whoShoots()
+    //==Prepare to shoot
+    // for(var i = 0; i<$score.length; i++)
+     if(kicked === false) {
+       var kicked =true
+        $('#btn').on('click', function(){
+        ($kick).animate({height:'0%'}, 1000);
+        })
+    }
+
+        $('#btn2').click(function(){
+        ($kick).stop()
+    var result = (($timer.height()/$kick.height())*100)
+
+    if(result<1500){
+      alert($score + " you missed it!")
+      setTimeout(newShoot, 1000);
+    }
+      // newShoot()
+
+    else if(result>12500){
+      alert($score + " Time is up, you missed your shoot")
+      setTimeout(newShoot, 1000);
+
+    }else {
+      $score += 1
+      turn++
+      alert($score + " It's a goal!" + turn)
+    setTimeout(newShoot(), 3000)
+
+      }
+      })
+      function newShoot(){
+        ($kick).animate({height:'100%'}, 60)
+      var kicked = false}
+
+
+
 //
-//
-// ////****    FUNCTIONS     *****////
-// newShoot()
-//     //==Prepare to shoot
-//     // for(var i = 0; i<$score.length; i++)
-//      if(kicked === false) {
-//        var kicked =true
-//         $('#btn').on('click', function(){
-//         ($kick).animate({height:'0%'}, 600);
-//         })
-//     //
-//         // console.log(result + "    you missed it!")
-//     }
-// //     // kicking!
-//     else if (kicked === true) {
-//         $('#btn2').click(function(){
-//         ($kick).stop()
-//     })
-//
-//     if(result<3000){
-//       console.log(result + "    It's a goal!")
-//       $score += 1
-//     }
-//   }
-//
-//
-// function newShoot(){
-//   ($kick).animate({height:'100%'}, 60)}
-// newShoot()
-// }
+function whoShoots(){
+  return (turn % 2 ? 'player1': 'player2')
+}
+
+///QUESTIONS
+// 0- WHY RESULT HAS SUCH A RANDOM RESULT
+// 1- HOW TO MAKE THE CLICK UNCLICABLE AFTER THE FIRST GET ready
+// 2- HOW TO RESET THE turns
+// 3- HOW TO SET A SCORE BOARD TO THE BEST OF 5 WITH 1 EXTRA ON TIE
+// 4- HOW TO SET UP THE MATH RANDOM FOR TRAJECTORY ON THE BALL
+// 5-
 
 
 /////////////////////////////////////////////////////////////////////////////

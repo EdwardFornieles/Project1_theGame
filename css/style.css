@@ -1,9 +1,37 @@
 body {
   background-image: url('http://i.imgur.com/A8foSNC.png');
+  background-size:cover;
+  background-repeat: no-repeat;
   margin: 0 auto;
   height: 100%;
   width: 100%;
-  
+
+}
+#scoreBoard {
+  border: 2px solid black;
+  max-width: 500px;
+  height: 50px;
+  margin: 0 auto;
+  background: rgba(10,10,10,0.6);
+  border-radius: 70px;
+}
+.playerScore {
+  border: 0px solid rgba(100,100,100,0.6);
+  background: rgba(100,60,60,0.6);
+  border-radius: 90px;
+  display: inline-flex;
+  position: relative;
+  height: 100%;
+  width: 49%
+}
+.attempt {
+  border: 8px solid rgba(111,100,100,0.6);
+  background: rgba(100,100,119,0.6);
+  border-radius: 100%;
+  height: 70%;
+  width: 70%;
+  display: inline-flex;
+  position: relative;
 }
 
 #player {
@@ -19,7 +47,7 @@ body {
 }
 
 #shoot {
-  height:100%;
+  height:0%;
   width: 100%;
   background: white;
   position: relative;
