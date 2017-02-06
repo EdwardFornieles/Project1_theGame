@@ -3,6 +3,7 @@ body {
   margin: 0 auto;
   height: 100%;
   width: 100%;
+  
 }
 
 #player {
@@ -21,11 +22,5 @@ body {
   height:100%;
   width: 100%;
   background: white;
-  position: relative;
-}
-#range {
-  height: 70%;
-  widows: 5%;
-  background: green;
   position: relative;
 }

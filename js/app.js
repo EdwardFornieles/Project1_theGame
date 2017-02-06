@@ -1,51 +1,94 @@
 $( document ).ready(function(){
 
+
+///////////////////////////////////////////////////////////////////////////////
+////////////////////        THIRD ATTEMPT          ///////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ///////////////////////////////////////////////////////////////////////////////
 ////////////////////        SECOND ATTEMPT          ///////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 
 ////****    GLOBAL VARIABLES    *****////
-var $timer = $('#timer')
-var $beforeKick = $('#shoot')
-var kicked = false
-var score = 0
-function reset(){
-  ($kick).animate({height:'100%'}, 60);
-}
-
-////****    FUNCTIONS     *****////
-
-//==
-for(var i = 0; i<score.length; i++)
- if(kicked === false) {
-    $('#btn').on('click', function(){
-    ($kick).animate({height:'0%'}, 600);
-    })
-
-    console.log(result + "    you missed it!")
-}
-else if (kicked === true) {
-    $('#btn2').click(function(){
-    ($kick).stop();
-reset()
-var kicked =true
-var result = (($timer.height()/$kick.height())*100)
-if(result<3000){
-  console.log(result + "    It's a goal!")
-  score += 1
-}
-})
-}
-
-
-
-
-
-
-
-//trying to set a reset function  for the turn
-
-
+// var $timer = $('#timer')
+// var $kick = $('#shoot')
+// var $score = 0
+// var kicked = false
+// var result = (($timer.height()/$kick.height())*100)
+//
+//
+// ////****    FUNCTIONS     *****////
+// newShoot()
+//     //==Prepare to shoot
+//     // for(var i = 0; i<$score.length; i++)
+//      if(kicked === false) {
+//        var kicked =true
+//         $('#btn').on('click', function(){
+//         ($kick).animate({height:'0%'}, 600);
+//         })
+//     //
+//         // console.log(result + "    you missed it!")
+//     }
+// //     // kicking!
+//     else if (kicked === true) {
+//         $('#btn2').click(function(){
+//         ($kick).stop()
+//     })
+//
+//     if(result<3000){
+//       console.log(result + "    It's a goal!")
+//       $score += 1
+//     }
+//   }
+//
+//
+// function newShoot(){
+//   ($kick).animate({height:'100%'}, 60)}
+// newShoot()
+// }
 
 
 /////////////////////////////////////////////////////////////////////////////
