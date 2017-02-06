@@ -8,31 +8,38 @@ $( document ).ready(function(){
 var $timer = $('#timer')
 var $beforeKick = $('#shoot')
 var kicked = false
-
+var score = 0
+function reset(){
+  ($kick).animate({height:'100%'}, 60);
+}
 
 ////****    FUNCTIONS     *****////
 
 //==
-for(kicked === false) { {
-  $('#btn').on('click', function(){
-  ($kick).animate({height:'100%'}, 600);
-})
-  console.log(result + "    you missed it!")
+for(var i = 0; i<score.length; i++)
+ if(kicked === false) {
+    $('#btn').on('click', function(){
+    ($kick).animate({height:'0%'}, 600);
+    })
 
+    console.log(result + "    you missed it!")
 }
-
-else if (kicked === true ) {
-  $('#btn2').click(function(){
-($kick).stop();
-})
+else if (kicked === true) {
+    $('#btn2').click(function(){
+    ($kick).stop();
+reset()
 var kicked =true
 var result = (($timer.height()/$kick.height())*100)
-if(result<3000)
-
+if(result<3000){
   console.log(result + "    It's a goal!")
- }
-  ($kick).animate({height:'0%'}, 60);
+  score += 1
 }
+})
+}
+
+
+
+
 
 
 
