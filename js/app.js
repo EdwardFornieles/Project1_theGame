@@ -75,9 +75,9 @@ var currentPlayer = whoseTurn();
       console.log('Away Wins!')
     }
     restart()
+    }
+    })
 
-  })
-// }
 
 // function noMore() {
 //   $('#btn').unbind('click')
