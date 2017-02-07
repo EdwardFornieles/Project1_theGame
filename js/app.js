@@ -137,12 +137,14 @@ $(document).ready(function() {
     if (result < 95) {
       alert(currentPlayer.score + " you missed it!  " + result)
       setTimeout(newShot, 60);
-      (currentPlayer.attempts).addClass('missed')
+      $("#" + currentPlayer.attempts[currentPlayer.attemptNum]).addClass('missed');
+      currentPlayer.attemptNum++
       turn++
 
     } else {
       currentPlayer.score += 1
-      (currentPlayer.attempts).addClass('goal')
+      $("#" + currentPlayer.attempts[currentPlayer.attemptNum]).addClass('goal');
+      currentPlayer.attemptNum++
       turn++
       console.log(whoseTurn())
       alert(currentPlayer.score + " It's a goal!  ")
