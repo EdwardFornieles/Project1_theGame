@@ -42,13 +42,14 @@ body {
   height:100px;
   width: 50px;
   border: 2px solid black;
-  position: absolute;
-  background: red;
+  position: relative;
+  background: white;
 }
 
 #shoot {
   height:0%;
   width: 100%;
-  background: white;
-  position: relative;
+  background: red;
+  position: absolute;
+  bottom: 0;
 }

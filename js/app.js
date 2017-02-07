@@ -63,7 +63,9 @@ $(document).ready(function() {
   }
   // var $score = 0
   var kicked = false
-  var result = (($timer.height() / $kick.height()) * 100)
+  var result = (($kick.height() / $timer.height()) * 100)
+  console.log($kick.height())
+  console.log($timer.height())
 
   ////****    FUNCTIONS     *****////
   function whosTurn() {
@@ -77,31 +79,30 @@ $(document).ready(function() {
     var kicked = true
     $('#btn').on('click', function() {
       ($kick).animate({
-        height: '0%'
-      }, 1000);
+        height: '100%'
+      }, 1000, function(){
+        alert(currentPlayer.score + " Time is up, you missed your shoot" + result)
+        setTimeout(newShoot, 1000);
+        turn++
+
+      });
     })
   }
 
   $('#btn2').click(function() {
     ($kick).stop()
-    var result = (($timer.height() / $kick.height()) * 100)
+    var result = Math.round(($kick.height()/$timer.height() ) * 100)
 
-    if (result < 1500) {
-      alert(currentPlayer.score + " you missed it!")
+    if (result < 95) {
+      alert(currentPlayer.score + " you missed it!" + result)
       setTimeout(newShoot, 1000);
       turn++
-      // console.log(whosTurn())
-    } else if (result > 12500) {
-      alert(currentPlayer.score + " Time is up, you missed your shoot")
-      setTimeout(newShoot, 1000);
-      turn++
-      // console.log(whosTurn())
 
     } else {
       currentPlayer.score += 1
       turn++
       // console.log(whosTurn())
-      alert(currentPlayer.score + " It's a goal!")
+      alert(currentPlayer.score + " It's a goal!"+ result)
       setTimeout(newShoot(), 3000)
     }
   })
@@ -110,7 +111,7 @@ $(document).ready(function() {
     currentPlayer = whosTurn();
     console.log(currentPlayer);
     ($kick).animate({
-      height: '100%'
+      height: '0%'
     }, 60)
     kicked = false
   }
