@@ -62,22 +62,21 @@ $(document).ready(function() {
         turn++
         console.log(whoseTurn())
       alert(currentPlayer.score + " It's a goal!  ")
-      setTimeout(newShot, 600)
-    }
+      setTimeout(newShot, 600)}
     if (player2.attemptNum === 5) {
       if (player1.score === player2.score) {
         stop()
         console.log("it's a tie")
       } else if (player1.score > player2.score) {
         stop()
-        console.log("Player 1 win")
+        restart()
       } else {
         stop()
-        console.log('player 2 wins')
+        restart()
       }
     }
-
   })
+
 
   function newShot() {
     currentPlayer = whoseTurn();
@@ -98,15 +97,29 @@ $(document).ready(function() {
   //NEED TO RESTART THE GAME AFTER A WINNER IS DEFINED
   //  - SET PLAYER.SCORE, PLAYER.ATTEMPS AND TURN TO 0
   function restart(){
+    var msg = confirm(winner + 'Wins the game, Play Again?');
+    if(msg){
     player1.score = 0
     player2.score = 0
     player1.attemptNum = 0
     player2.attemptNum = 0
     $('.attempt').removeClass('.missed','goal')
     turn = 0
-
+    newShot()
+    }else{
+    alert(winner + 'wins the game!')
+    }
   }
 
+  var winner = function(){
+    if(player1.score>player2.score){
+      return player1.team
+    }else if(player2.score<player2.score){
+      return player2.team
+    }else{
+      return "It's a Tie"
+    }
+  }
 
   // ON A TIE WE NEED TO START A SECOND GAME MODE TO ONE GOAL FOR EACH
   // PLAYER
