@@ -33,65 +33,71 @@ var currentPlayer = whoseTurn();
 
     newShot()
     console.log('running')
-    if (kicked === false) {
-    var kicked = true
-    $('#btn').on('click', function() {
-      ($kick).animate({
-        height: '100%'
-      }, 1000, function() {
-        alert(currentPlayer.score + " Time is up, you missed your shot" + result)
-        setTimeout(newShot, 60)
+
+
+    $('body').on('keydown', function() {
+      console.log("key pressed")
+      if (kicked === false) {
+        ($kick).animate({
+          height: '100%'
+        }, 500, function() {
+          alert(currentPlayer.score + " Time is up, you missed your shot" + result)
+          setTimeout(newShot, 1500)
+          $("#" + currentPlayer.attempts[currentPlayer.attemptNum]).addClass('missed');
+          currentPlayer.attemptNum++
+            turn++
+        })
+        kicked = true
+      }
+    })
+
+
+
+  $('body').on('keyup', function() {
+    if (kicked === true) {
+      ($kick).stop()
+      var result = Math.round(($kick.height() / $timer.height()) * 100)
+      if (result < 98) {
+        setTimeout(newShot, 1500);
         $("#" + currentPlayer.attempts[currentPlayer.attemptNum]).addClass('missed');
         currentPlayer.attemptNum++
           turn++
-      })
-    })
+      } else {
+        currentPlayer.score += 1
+        $("#" + currentPlayer.attempts[currentPlayer.attemptNum]).addClass('goal');
+        currentPlayer.attemptNum++
+          turn++
+          console.log(whoseTurn())
+        setTimeout(newShot, 1500)
+      }
+    if (player2.attemptNum === 5) {
+      if (player1.score === player2.score) {
+        console.log("it's a tie")
+      } else if (player1.score > player2.score) {
+        console.log('Home Wins!')
+      } else {
+        console.log('Away Wins!')
+      }
+      restart()
+      }
+    }
+  })
+
+
+  // function noMore() {
+  //   $('#btn').unbind('click')
+  //   $('#btn2').unbind('click')
+  // }
+
+  function newShot() {
+    currentPlayer = whoseTurn();
+    console.log(currentPlayer);
+    ($kick).animate({
+      height: '0%'
+    }, 1000)
+
+    kicked = false
   }
-
-  $('#btn2').click(function() {
-    ($kick).stop()
-    var result = Math.round(($kick.height() / $timer.height()) * 100)
-    if (result < 95) {
-      // alert(currentPlayer.score + " you missed it!  " + result)
-      setTimeout(newShot, 60);
-      $("#" + currentPlayer.attempts[currentPlayer.attemptNum]).addClass('missed');
-      currentPlayer.attemptNum++
-        turn++
-    } else {
-      currentPlayer.score += 1
-      $("#" + currentPlayer.attempts[currentPlayer.attemptNum]).addClass('goal');
-      currentPlayer.attemptNum++
-        turn++
-        console.log(whoseTurn())
-      // alert(currentPlayer.score + " It's a goal!  ")
-      setTimeout(newShot, 600)
-    }
-  if (player2.attemptNum === 5) {
-    if (player1.score === player2.score) {
-      console.log("it's a tie")
-    } else if (player1.score > player2.score) {
-      console.log('Home Wins!')
-    } else {
-      console.log('Away Wins!')
-    }
-    restart()
-    }
-    })
-
-
-// function noMore() {
-//   $('#btn').unbind('click')
-//   $('#btn2').unbind('click')
-// }
-
-function newShot() {
-  currentPlayer = whoseTurn();
-  console.log(currentPlayer);
-  ($kick).animate({
-    height: '0%'
-  }, 60)
-  kicked = false
-}
 
 function whoseTurn() {
   return (turn % 2 ? player2 : player1)
