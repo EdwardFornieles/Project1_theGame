@@ -34,12 +34,17 @@ var currentPlayer = whoseTurn();
     newShot()
     console.log('running')
 
-    $('body').on('keydown', function() {
+    $('body').on('keydown', keyPressed)
+    $('body').on('keyup', keyReleased)
+
+    function keyPressed() {
       console.log("key pressed")
       if (kicked === false) {
         ($kick).animate({
           height: '100%'
         }, 500, function() {
+          $('body').off('keydown', keyPressed)
+          $('body').off('keyup', keyReleased)
           alert(currentPlayer.score + " Time is up, you missed your shot" + result)
           setTimeout(newShot, 1500)
           $("#" + currentPlayer.attempts[currentPlayer.attemptNum]).addClass('missed');
@@ -48,13 +53,13 @@ var currentPlayer = whoseTurn();
         })
         kicked = true
       }
-    })
+    }
 
-
-
-  $('body').on('keyup', function() {
+  function keyReleased() {
     if (kicked === true) {
       ($kick).stop()
+      $('body').off('keydown', keyPressed)
+      $('body').off('keyup', keyReleased)
       var result = Math.round(($kick.height() / $timer.height()) * 100)
       if (result < 98) {
         setTimeout(newShot, 1500);
@@ -66,9 +71,9 @@ var currentPlayer = whoseTurn();
         $("#" + currentPlayer.attempts[currentPlayer.attemptNum]).addClass('goal');
         currentPlayer.attemptNum++
           turn++
-          if(currentPlayer.score > 0){
-            $('#ball').addClass('ballgoal')
-          }
+          // if(currentPlayer.score > 0){
+          //   $('#ball').addClass('ballgoal')
+          // }
           console.log(whoseTurn())
         setTimeout(newShot, 1500)
       }
@@ -80,10 +85,10 @@ var currentPlayer = whoseTurn();
       } else {
         console.log('Away Wins!')
       }
-      restart()
+      setTimeout(restart, 1000)
       }
     }
-  })
+  }
 
 
   // function noMore() {
@@ -96,10 +101,15 @@ var currentPlayer = whoseTurn();
     console.log(currentPlayer);
     ($kick).animate({
       height: '0%'
-    }, 1000)
+    }, 1000).promise().done(function(){
+      kicked = false
 
-    kicked = false
-  }
+      $('body').on('keydown', keyPressed)
+      $('body').on('keyup', keyReleased)
+    })
+    }
+
+
 
 function whoseTurn() {
   return (turn % 2 ? player2 : player1)
@@ -129,11 +139,11 @@ function restart() {
   player2.attemptNum = 0
   $('.attempt').removeClass('missed goal')
   turn = 0
-}else{
-  if(winner !== "It's a Tie")
-  alert('Thank you for playing')
-}
-}
+    }else{
+      if(winner !== "It's a Tie")
+      alert('Thank you for playing')
+    }
+  }
 // }
 // function itsAGoal(){
 //   if(player1.score !==0 && player2.score)
@@ -146,38 +156,4 @@ function restart() {
 //     }, 10);
 // })
 // moveGoalie()
-  //AFTER WE HAVE A WINNER WE NEED TO STOP THE EVENT LISTENER ON
-  // KICKING AND OFFER THE OPTION TO RESTART THE GAME
-
-
-  //NEED TO RESTART THE GAME AFTER A WINNER IS DEFINED
-  //  - SET PLAYER.SCORE, PLAYER.ATTEMPS AND TURN TO 0
-  // function restart(){
-  //   var msg = confirm(winner + 'Wins the game, Play Again?');
-  //   if(msg){
-  //   player1.score = 0
-  //   player2.score = 0
-  //   player1.attemptNum = 0
-  //   player2.attemptNum = 0
-  //   $('.attempt').removeClass('.missed','goal')
-  //   turn = 0
-  //   newShot()
-  //   }else{
-  //   alert(winner + 'wins the game!')
-  //   }
-  // }
-
-
-
-  // ON A TIE WE NEED TO START A SECOND GAME MODE TO ONE GOAL FOR EACH
-  // PLAYER
-  // CLEAR SCOREBOARD ON SCREEN KEEPING RECORD OF GENERAL SCORE
-  // ONCE A WINNER IS DEFINED DISPLAY A MESSAGE WITH OVERALL SCORE
-
-
-
-
-
-
-
 })
