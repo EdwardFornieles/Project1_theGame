@@ -62,16 +62,22 @@ body {
   background: rgba(255, 0, 0, 0.9);
 }
 
-#goalkeeper {
-
-  background-image: url('http://m.gifanimados.com/Gifs-Deportes/Animaciones-Futbol/Porteros-Futbol/Portero-Futbol-88259.gif');
+#ball {
+width: 63px;
+position: absolute;
+bottom: 360px;
+left: 408px;
 }
 
-#ball {
-  height: 50px;
-  width: 50px;
-  border: 0.5px solid rgba(25, 25, 25, 0.1);
-  background-image: url('http://i.imgur.com/ZLDTbYJ.png');
+#goalkeeper {
   position: absolute;
-  bottom: 3px;
+  width: 110px;
+  bottom: 430px;
+  left: 432px;
+}
+.ballgoal {
+ width: 32 px;
+ position: absolute;
+ bottom: 550px;
+ left: 350px;
 }

@@ -34,7 +34,6 @@ var currentPlayer = whoseTurn();
     newShot()
     console.log('running')
 
-
     $('body').on('keydown', function() {
       console.log("key pressed")
       if (kicked === false) {
@@ -67,6 +66,9 @@ var currentPlayer = whoseTurn();
         $("#" + currentPlayer.attempts[currentPlayer.attemptNum]).addClass('goal');
         currentPlayer.attemptNum++
           turn++
+          if(currentPlayer.score > 0){
+            $('#ball').addClass('ballgoal')
+          }
           console.log(whoseTurn())
         setTimeout(newShot, 1500)
       }
@@ -131,8 +133,19 @@ function restart() {
   if(winner !== "It's a Tie")
   alert('Thank you for playing')
 }
-
 }
+// }
+// function itsAGoal(){
+//   if(player1.score !==0 && player2.score)
+// }
+// function moveGoalie(){
+//     var x = 0;
+//     setInterval(function(){
+//         x-=1;
+//         $('#goalkeeper').css('left', x + 'px 10');
+//     }, 10);
+// })
+// moveGoalie()
   //AFTER WE HAVE A WINNER WE NEED TO STOP THE EVENT LISTENER ON
   // KICKING AND OFFER THE OPTION TO RESTART THE GAME
 
