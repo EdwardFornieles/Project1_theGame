@@ -110,7 +110,7 @@
   font-family: Arial, Helvetica, sans-serif;
   color: rgba(255, 255, 255, 0.8) top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.8);
   z-index: 99999;
   height: 100%;
   width: 100%;
@@ -124,17 +124,17 @@
   transform: translate(-50%, -50%);
   background-image: url(http://i.imgur.com/4WbtVyP.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   border: 2px solid white;
-  width: 58%;
-  height: 40%;
-  padding: 22px;
+  width: 49%;
+  height: 55%;
+  padding: 40px;
 }
 
 #button {
   position: relative;
-  left: 30%;
-  bottom: 30%;
+  left: 60%;
+  top: 30%;
   width: 15%;
 }
 
@@ -368,6 +368,7 @@
 }
 
 .modalconent {
+
   position: absolute;
   color: aliceblue;
   top: 50%;

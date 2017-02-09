@@ -128,7 +128,7 @@ $(document).ready(function() {
 
 
   function restart() {
-    var msg = confirm(winner() + " wins!, Play Again?");
+    var msg = confirm(winner() + " , Play Again?");
     if (msg) {
       player1.score = 0
       player2.score = 0
