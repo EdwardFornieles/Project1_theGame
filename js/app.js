@@ -28,14 +28,17 @@ var currentPlayer = whoseTurn();
 ////////////////////////////////////////
 ////****       FUNCTIONS       *****////
 ////////////////////////////////////////
-
+window.onload = function () {
+    $('#button').click(function () {
+        $('#modal').css('display', 'none')
+        newShot()
+    })
+}
 //==Prepare to shoot
 
-    newShot()
+    // newShot()
     console.log('running')
 
-    $('body').on('keydown', keyPressed)
-    $('body').on('keyup', keyReleased)
 
     function keyPressed() {
       console.log("key pressed")
@@ -45,7 +48,7 @@ var currentPlayer = whoseTurn();
         }, 500, function() {
           $('body').off('keydown', keyPressed)
           $('body').off('keyup', keyReleased)
-          alert(currentPlayer.score + " Time is up, you missed your shot" + result)
+          $('#onGameFeed').addClass('pop')
           setTimeout(newShot, 1500)
           $("#" + currentPlayer.attempts[currentPlayer.attemptNum]).addClass('missed');
           currentPlayer.attemptNum++
@@ -85,6 +88,7 @@ var currentPlayer = whoseTurn();
       } else {
         console.log('Away Wins!')
       }
+      scoreBoard = (player1.team +' '+player1.score+' '+player2.team+' '+player2.score)
       setTimeout(restart, 1000)
       }
     }
@@ -103,9 +107,11 @@ var currentPlayer = whoseTurn();
       height: '0%'
     }, 1000).promise().done(function(){
       kicked = false
+      $('#onGameFeed').removeClass('pop')
 
       $('body').on('keydown', keyPressed)
       $('body').on('keyup', keyReleased)
+
     })
     }
 
@@ -131,7 +137,7 @@ function onTie() {
 }
 
 function restart() {
-  var msg = confirm(winner() + ' , Play Again?');
+  var msg = confirm(winner() + " wins!, Play Again?");
     if(msg){
   player1.score = 0
   player2.score = 0
@@ -144,7 +150,11 @@ function restart() {
       alert('Thank you for playing')
     }
   }
-// }
+
+
+
+
+
 // function itsAGoal(){
 //   if(player1.score !==0 && player2.score)
 // }
@@ -156,4 +166,5 @@ function restart() {
 //     }, 10);
 // })
 // moveGoalie()
+//
 })
