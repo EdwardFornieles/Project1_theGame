@@ -1,4 +1,3 @@
-@media screen and (max-width: 1600px){
 .field {
   position: absolute;
   background-image: url(http://i.imgur.com/A8foSNC.png);
@@ -79,6 +78,16 @@
   display: block;
   bottom: -45%;
   left: 43%;
+  transform: scale(1) translate(0px, 0px);
+  transition: all 0.8s;
+}
+
+.ball-left {
+    transform: scale(.5) translate(-310px, -216px)!important;
+}
+
+.ball-right{
+
 }
 
 #goalkeeper {
@@ -139,22 +148,32 @@
   color: yellow;
   opacity: 100;
   height: 20px;
-  width: 212px;
+  width: 230px;
   background-color: rgba(0, 0, 0, 0.2);
   border: yellow 1px solid;
   border-radius: 5px;
   left: 2%;
-  bottom: -20%;
+  bottom: 20%;
+  text-align: center;
+}
+
+#notGoal.pop {
+  color:rgba(255,0,0,1);
+  border: 1px rgba(255,0,0,1) solid;
+}
+#goal.pop {
+  color:rgba(0,255,0,1);
+  border: 1px rgba(0,255,0,1) solid;
 }
 }
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1600px){
 
 #scoreBoard {
   position: relative;
   border: 2px solid black;
-  max-width: 300px;
-  height: 30px;
-  min-height: 25px;
+  max-width: 500px;
+  height: 50px;
+  min-height: 35px;
   margin: 0 auto;
   background: rgba(10, 10, 10, 0.6);
   border-radius: 70px;
@@ -166,7 +185,7 @@
   border-radius: 90px;
   display: inline-flex;
   position: relative;
-  height: 60%;
+  height: 100%;
   width: 49%;
   min-width: 20%;
   left: 3px;
@@ -182,9 +201,6 @@
   position: relative;
 }
 
-#player {
-  background-image: url();
-}
 
 #timer {
   height: 170px;
@@ -204,14 +220,6 @@
   bottom: 0;
 }
 
-.goal {
-  background: rgba(0, 255, 0, 0.9);
-}
-
-.missed {
-  background: rgba(255, 0, 0, 0.9);
-}
-
 #ball {
   width: 63px;
   position: relative;
@@ -223,11 +231,9 @@
 #goalkeeper {
   position: relative;
   display: block;
-  margin: 0 auto;
-  max-width: 120px;
-  min-width: 91px;
-  left: 0;
-  
+  width: 110px;
+  left: 46%;
+  bottom: -39%;
 }
 
 .ballgoal {
@@ -270,21 +276,116 @@
   width: 15%;
 }
 
-.hide {
-  opacity: 0;
 }
 
-.pop {
+@media screen and (max-width: 1200px){
+
+#scoreBoard {
   position: relative;
-  font: caption;
-  color: yellow;
-  opacity: 100;
-  height: 20px;
-  width: 212px;
-  background-color: rgba(0, 0, 0, 0.2);
-  border: yellow 1px solid;
-  border-radius: 5px;
+  border: 2px solid black;
+  max-width: 300px;
+  height: 30px;
+  min-height: 25px;
+  margin: 0 auto;
+  background: rgba(10, 10, 10, 0.6);
+  border-radius: 70px;
+}
+
+.playerScore {
+  border: 0px solid rgba(100, 100, 100, 0.6);
+  background: rgba(100, 60, 60, 0.6);
+  border-radius: 90px;
+  display: inline-flex;
+  position: relative;
+  height: 60%;
+  width: 49%;
+  min-width: 20%;
+  left: 3px;
+}
+
+.attempt {
+  border: 8px solid rgba(111, 100, 100, 0.6);
+  background: rgba(100, 100, 119, 0.6);
+  border-radius: 100%;
+  height: 70%;
+  width: 70%;
+  display: inline-flex;
+  position: relative;
+}
+
+#timer {
+  height: 170px;
+  width: 28px;
+  border: 2px solid black;
+  position: relative;
+  background: white;
   left: 2%;
-  bottom: -20%;
+  bottom: -30%;
+}
+
+#shot {
+  height: 0%;
+  width: 100%;
+  background: red;
+  position: absolute;
+  bottom: 0;
+}
+
+#ball {
+  width: 63px;
+  position: relative;
+  display: block;
+  bottom: -45%;
+  left: 43%;
+}
+
+#goalkeeper {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  max-width: 120px;
+  min-width: 91px;
+  left: 0;
+
+}
+
+.ballgoal {
+  width: 32px;
+  position: absolute;
+  bottom: 550px;
+  left: 350px;
+}
+
+#modal {
+  position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgba(255, 255, 255, 0.8) top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 99999;
+  height: 100%;
+  width: 100%;
+}
+
+.modalconent {
+  position: absolute;
+  color: aliceblue;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(http://i.imgur.com/4WbtVyP.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 2px solid white;
+  width: 58%;
+  height: 40%;
+  padding: 22px;
+}
+
+#button {
+  position: relative;
+  left: 30%;
+  bottom: 30%;
+  width: 15%;
 }
 }
