@@ -20,11 +20,11 @@
   
 #APROACH#
 
-As a student of the WDI program at General Assembly, I have had the priviliege of learning new skills that besides the technical aspects of Web development have helped me to see things from a different perspective when it comes to problem solving.
+As a student of the WDI program at General Assembly, I have had the privilege of learning new skills that, besides teaching me the technical aspects of web development, have also helped me to see things from a different perspective when it comes to problem solving.
 
-This Project 1 - Penalty Kicks, has been accomplished in full considering it's minimun requirements (MVP) as well as some strech goals.
+This first project, Penalty Kicks, fulfills the minimum requirements in full (MVP) and also accomplishes some stretch goals.
 
-In order to complete achieve the result I mostly focussed on the game logic, on wich a player has to choose the right timing in order to score a goal. Using HTML, CSS, Javascript, Jquery and GarageBand -in between other softwares- I was able to put in place a friendly game that I hope you can enjoy!
+In order to create a successful game, I focused mainly on the game logic, which states that a player has to release the ball during a specific time frame in order to score a goal. Using HTML, CSS, Javascript, Jquery and GarageBand - among other softwares - I was able to build a game that I hope you will enjoy!
 
 <br>
 #WIREFRAME#
