@@ -46,6 +46,10 @@ $(document).ready(function() { intro.play()
       crowd.onended = function(){
 	       this.play()
        }
+       crowd2.play()
+       crowd2.onended = function(){
+         this.play()
+       }
       newShot()
     })
   }
@@ -114,10 +118,7 @@ $(document).ready(function() { intro.play()
         }
         scoreBoard = (player1.team + ' ' + player1.score + ' ' + player2.team + ' ' + player2.score)
         setTimeout(restart, 1000)
-        crowd2.play()
-        crowd2.onended = function(){
-          this.play()
-        }
+
       }
     }
   }

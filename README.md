@@ -1,7 +1,11 @@
-### GENERAL ASSAMBLY / WDI 43 - 2017 ![IRKAT](http://i.imgur.com/xKn2oFy.png?1)
-#PROJECT 1
+### GENERAL ASSAMBLY / WDI 43 - 2017
 
-#*PENALTY KICKS!*
+ ![IRKAT](http://i.imgur.com/xKn2oFy.png?1)
+
+
+##PROJECT 1##
+
+#*PENALTY KICKS!*#
 ![SOCCER TIME](http://i.imgur.com/HRtaR8f.jpg)
 
 *******************************************************************************
@@ -18,7 +22,7 @@
   <br>
   <br>
   
-#APROACH#
+#APPROACH#
 
 As a student of the WDI program at General Assembly, I have had the privilege of learning new skills that, besides teaching me the technical aspects of web development, have also helped me to see things from a different perspective when it comes to problem solving.
 
