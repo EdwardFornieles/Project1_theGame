@@ -1,5 +1,13 @@
+//AUDIO FILES, HERE TO RENDER BETTER
+var goalSound = new Audio('Media/Audio/goalSound.mp3')
+var crowd = new Audio('Media/Audio/crowd.mp3')
+var crowd2 = new Audio('Media/Audio/crowd2.mp3')
+var missedSound = new Audio('Media/Audio/missed.mp3')
+var intro = new Audio('Media/Audio/intro.mp3')
+var retry = new Audio('Media/Audio/retry.mp3')
 
-$(document).ready(function() {
+
+$(document).ready(function() { intro.play()
 
   ////////////////////////////////////////
   ////****    GLOBAL VARIABLES    ****////
@@ -25,9 +33,6 @@ $(document).ready(function() {
   var kicked = false
   var result = (($kick.height() / $timer.height()) * 100)
   var currentPlayer = whoseTurn();
-  var goalSound = new Audio('Media/Audio/goalSound.mp3')
-  var crowd = new Audio('Media/Audio/crowd.mp3')
-  var missedSound = new Audio('Media/Audio/missed.mp3')
 
   ////////////////////////////////////////
   ////****       FUNCTIONS       *****////
@@ -35,6 +40,8 @@ $(document).ready(function() {
   window.onload = function() {
     $('#button').click(function() {
       $('#modal').css('display', 'none')
+      intro.pause()
+      retry.pause()
       crowd.play()
       crowd.onended = function(){
 	       this.play()
@@ -59,7 +66,7 @@ $(document).ready(function() {
         $('#playerOn').removeClass('playing')
         $('#ball').addClass('ballOut')
         missedSound.play()
-        setTimeout(newShot, 2000)
+        setTimeout(newShot, 4000)
         $("#" + currentPlayer.attempts[currentPlayer.attemptNum]).addClass('missed');
         currentPlayer.attemptNum++
           turn++
@@ -75,8 +82,8 @@ $(document).ready(function() {
       $('body').off('keydown', keyPressed)
       $('body').off('keyup', keyReleased)
       var result = Math.round(($kick.height() / $timer.height()) * 100)
-      if (result < 70) {
-        setTimeout(newShot, 2000);
+      if (result < 90) {
+        setTimeout(newShot, 4000);
         $("#" + currentPlayer.attempts[currentPlayer.attemptNum]).addClass('missed');
         currentPlayer.attemptNum++
         $('#notGoal').addClass('pop')
@@ -93,7 +100,7 @@ $(document).ready(function() {
         $('#goal').addClass('pop')
         goalSound.play()
           turn++
-        setTimeout(newShot, 2000)
+        setTimeout(newShot, 4000)
       }
       $('#homeScore').text(player1.score)
       $('#awayScore').text(player2.score)
@@ -107,6 +114,10 @@ $(document).ready(function() {
         }
         scoreBoard = (player1.team + ' ' + player1.score + ' ' + player2.team + ' ' + player2.score)
         setTimeout(restart, 1000)
+        crowd2.play()
+        crowd2.onended = function(){
+          this.play()
+        }
       }
     }
   }
@@ -150,8 +161,8 @@ $(document).ready(function() {
 
 
   function restart() {
-    var msg = confirm(winner() + " , Play Again?");
-    if (msg) {
+      var msg = confirm(winner() + " , Play Again?");
+      if (msg) {
       player1.score = 0
       player2.score = 0
       player1.attemptNum = 0

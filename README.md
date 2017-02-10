@@ -1,19 +1,23 @@
-### PROJECT 1
+### GENERAL ASSAMBLY / WDI 43 - 2017 ![IRKAT](http://i.imgur.com/xKn2oFy.png?1)
+#PROJECT 1
 
 #*PENALTY KICKS!*
+![SOCCER TIME](http://i.imgur.com/HRtaR8f.jpg)
 
 *******************************************************************************
 ===============================================================================
 *******************************************************************************
 ===============================================================================
-APPROACH
-UNSOLVE PROBLEMS
+
+
 
 #INSTALLATION  INSTRUCTIONS#
 - Clone the Repository file
 - Click the link on the game GitHub to open in your browser.
   
-  <br></br>
+  <br>
+  <br>
+  
 #APROACH#
 
 As a student of the WDI program at General Assembly, I have had the priviliege of learning new skills that besides the technical aspects of Web development have helped me to see things from a different perspective when it comes to problem solving.
@@ -69,7 +73,7 @@ In order to complete achieve the result I mostly focussed on the game logic, on 
   - Inform when a **player wins** the game and **reset** the game
 
 <br>
-## Stretch goals
+## STRECTCH GOALS
 <br>
 
 - Develop a player's better interaction with the ball, kick, goal and goalie
@@ -81,14 +85,21 @@ In order to complete achieve the result I mostly focussed on the game logic, on 
 - Allow the player use the keeper to save a shot
 
 <br>
-## TECHNOLOGIES TO BE USE
+## TECHNOLOGIES USED
 <br>
 
 - HTML
-- CSS (including @media)
+- CSS
 - Some vanilla JavaScript and JQuery
-- Final Cut
 - Microsoft Office
+- GarageBand
+
+
+<br>
+## UNSOLVED PROBLEMS
+<br>
+- SET A MODAL WINDOW WITH MUSIC TO RESTART THE GAME
+- AUDIO GLITCHES
 
 <br>
 ### EXTRAS
