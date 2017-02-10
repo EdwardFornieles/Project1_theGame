@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
 
   ////////////////////////////////////////
@@ -24,6 +25,9 @@ $(document).ready(function() {
   var kicked = false
   var result = (($kick.height() / $timer.height()) * 100)
   var currentPlayer = whoseTurn();
+  var goalSound = new Audio('Media/Audio/goalSound.mp3')
+  var crowd = new Audio('Media/Audio/crowd.mp3')
+  var missedSound = new Audio('Media/Audio/missed.mp3')
 
   ////////////////////////////////////////
   ////****       FUNCTIONS       *****////
@@ -31,6 +35,10 @@ $(document).ready(function() {
   window.onload = function() {
     $('#button').click(function() {
       $('#modal').css('display', 'none')
+      crowd.play()
+      crowd.onended = function(){
+	       this.play()
+       }
       newShot()
     })
   }
@@ -40,7 +48,7 @@ $(document).ready(function() {
 
 
   function keyPressed() {
-    console.log("key pressed")
+
     if (kicked === false) {
       ($kick).animate({
         height: '100%'
@@ -48,7 +56,10 @@ $(document).ready(function() {
         $('body').off('keydown', keyPressed)
         $('body').off('keyup', keyReleased)
         $('#onGameFeed').addClass('pop')
-        setTimeout(newShot, 1500)
+        $('#playerOn').removeClass('playing')
+        $('#ball').addClass('ballOut')
+        missedSound.play()
+        setTimeout(newShot, 2000)
         $("#" + currentPlayer.attempts[currentPlayer.attemptNum]).addClass('missed');
         currentPlayer.attemptNum++
           turn++
@@ -60,25 +71,32 @@ $(document).ready(function() {
   function keyReleased() {
     if (kicked === true) {
       ($kick).stop()
+      $('#playerOn').removeClass('playing')
       $('body').off('keydown', keyPressed)
       $('body').off('keyup', keyReleased)
       var result = Math.round(($kick.height() / $timer.height()) * 100)
-      if (result < 98) {
-        setTimeout(newShot, 1500);
+      if (result < 70) {
+        setTimeout(newShot, 2000);
         $("#" + currentPlayer.attempts[currentPlayer.attemptNum]).addClass('missed');
         currentPlayer.attemptNum++
         $('#notGoal').addClass('pop')
+        $('#ball').addClass('ballCatched')
+        $('#goalkeeper').addClass('keeperCatched')
+        missedSound.play()
           turn++
       } else {
         currentPlayer.score += 1
         $("#" + currentPlayer.attempts[currentPlayer.attemptNum]).addClass('goal');
         currentPlayer.attemptNum++
+        $('#ball').addClass('ballLeft')
+        $('#goalkeeper').addClass('keeperMissed')
         $('#goal').addClass('pop')
+        goalSound.play()
           turn++
-
-          console.log(whoseTurn())
-        setTimeout(newShot, 1500)
+        setTimeout(newShot, 2000)
       }
+      $('#homeScore').text(player1.score)
+      $('#awayScore').text(player2.score)
       if (player2.attemptNum === 5) {
         if (player1.score === player2.score) {
           console.log("it's a tie")
@@ -95,18 +113,22 @@ $(document).ready(function() {
 
   function newShot() {
     currentPlayer = whoseTurn();
-    console.log(currentPlayer);
     ($kick).animate({
       height: '0%'
     }, 1000).promise().done(function() {
       kicked = false
+      $('#playerOn').addClass('playing')
+      $('.playing').html(currentPlayer.team+"'s turn")
       $('#onGameFeed').removeClass('pop')
       $('#notGoal').removeClass('pop')
       $('#goal').removeClass('pop')
-
+      $('#ball').removeClass('ballLeft')
+      $('#ball').removeClass('ballOut')
       $('body').on('keydown', keyPressed)
       $('body').on('keyup', keyReleased)
-
+      $('#ball').removeClass('ballCatched')
+      $('#goalkeeper').removeClass('keeperCatched')
+      $('#goalkeeper').removeClass('keeperMissed')
     })
   }
 
@@ -135,12 +157,30 @@ $(document).ready(function() {
       player1.attemptNum = 0
       player2.attemptNum = 0
       $('.attempt').removeClass('missed goal')
+      $('#homeScore').text(player1.score)
+      $('#awayScore').text(player2.score)
       turn = 0
     } else {
       if (winner !== "It's a Tie")
         alert('Thank you for playing')
     }
   }
+
+
+
+//possible F(X) to add sound // STRETCH
+//   function goalSound(elem, path) {
+//   $('<source>').attr('src', path).appendTo(elem);
+// }
+//
+// $(".goal").mouseenter(function(){
+//      var audio = $('<audio />', {
+//        autoPlay : 'autoplay'
+//      });
+//      addSource(audio, 'audio/'+Math.ceil(Math.random() * 5)+'.mp3');
+//      addSource(audio, 'audio/'+Math.ceil(Math.random() * 5)+'.ogg');
+//      audio.appendTo('body');
+// });
 
 
 
