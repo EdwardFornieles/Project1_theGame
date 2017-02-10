@@ -6,11 +6,21 @@
 ===============================================================================
 *******************************************************************************
 ===============================================================================
-INSTALATION INSTRUCCION
 APPROACH
 UNSOLVE PROBLEMS
 
+#INSTALLATION  INSTRUCTIONS#
+- Clone the Repository file
+- Click the link on the game GitHub to open in your browser.
+  
+  <br></br>
+#APROACH#
 
+As a student of the WDI program at General Assembly, I have had the priviliege of learning new skills that besides the technical aspects of Web development have helped me to see things from a different perspective when it comes to problem solving.
+
+This Project 1 - Penalty Kicks, has been accomplished in full considering it's minimun requirements (MVP) as well as some strech goals.
+
+In order to complete achieve the result I mostly focussed on the game logic, on wich a player has to choose the right timing in order to score a goal. Using HTML, CSS, Javascript, Jquery and GarageBand -in between other softwares- I was able to put in place a friendly game that I hope you can enjoy!
 
 <br>
 #WIREFRAME#
@@ -49,13 +59,13 @@ UNSOLVE PROBLEMS
 
 **The minimum project requirements are**
 	
-  - Allow the player to **select a team**
   
   - Allow the player to **kick a ball** into a penalty kick
   
   - Allow the player to **switch turns** after every shoot
   
   - keep an accurate **score record** (5 shoots per player)
+  
   - Inform when a **player wins** the game and **reset** the game
 
 <br>
@@ -63,11 +73,12 @@ UNSOLVE PROBLEMS
 <br>
 
 - Develop a player's better interaction with the ball, kick, goal and goalie
+- Improve the movement on the goalie by setting and x and y paramenter for each limb.
 
 - Improve background display and sound effects to create a better 'atmosphere' for
   the game.
   
-- Allow the player use the keeper to save a shoot
+- Allow the player use the keeper to save a shot
 
 <br>
 ## TECHNOLOGIES TO BE USE
