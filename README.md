@@ -30,34 +30,45 @@ This first project, Penalty Kicks, fulfills the minimum requirements in full (MV
 
 In order to create a successful game, I focused mainly on the game logic, which states that a player has to release the ball during a specific time frame in order to score a goal. Using HTML, CSS, Javascript, Jquery and GarageBand - among other softwares - I was able to build a game that I hope you will enjoy!
 
-<br>
+
 # WIREFRAME
 <br>
 
 <br>
-***Welcome***
+
+**Welcome**
 <hr>
+
 ![Welcome Screen](http://i.imgur.com/gdIKImY.jpg)
 
 <br>
-***The Kick***
+
+**The Kick**
 <hr>
+
 ![The Kick](http://i.imgur.com/ry27oj8.jpg)
 
 <br>
-***Celebration***
+
+**Celebration**
 <hr>
+
 ![Celebration](http://i.imgur.com/WRIj8II.jpg)
 
 <br>
-***Final Score***
+
+**Final Score**
 <hr>
+
 ![Final Score](http://i.imgur.com/AzCsdWv.jpg)
+
 <br>
 
 
 <br>
+
 # USER STORIES
+
 <br>
 
 **Check out our trello board**
@@ -65,9 +76,12 @@ In order to create a successful game, I focused mainly on the game logic, which 
  *https://trello.com/b/lbkkZHK9/wdi43-project1-penaltykicks*
  
  
+
 <br>
+
 # MVP
 <br>
+
 
 **The minimum project requirements are**
 	
@@ -81,7 +95,9 @@ In order to create a successful game, I focused mainly on the game logic, which 
   - Inform when a **player wins** the game and **reset** the game
 
 <br>
+
 ## STRECTCH GOALS
+
 <br>
 
 - Develop a player's better interaction with the ball, kick, goal and goalie
@@ -94,7 +110,9 @@ In order to create a successful game, I focused mainly on the game logic, which 
 - Allow the player use the keeper to save a shot
 
 <br>
+
 ## TECHNOLOGIES USED
+
 <br>
 
 - HTML5
@@ -108,7 +126,9 @@ In order to create a successful game, I focused mainly on the game logic, which 
 
 
 <br>
+
 ## UNSOLVED PROBLEMS
+
 <br>
 
 - SET A MODAL WINDOW WITH MUSIC TO RESTART THE GAME
@@ -116,7 +136,9 @@ In order to create a successful game, I focused mainly on the game logic, which 
 - AUDIO GLITCHES
 
 <br>
+
 ### EXTRAS
+
 <br>
 
  *FOR MORE INFO https://en.wikipedia.org/wiki/Penalty_kick_(association_football)*
@@ -124,5 +146,6 @@ In order to create a successful game, I focused mainly on the game logic, which 
  *An idea https://www.youtube.com/watch?v=a1gWemn7O70&t=15s*
 
  *broadcast https://www.youtube.com/watch?v=4r4Dyc7d2To*
+
 <br>
  
