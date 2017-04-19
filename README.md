@@ -3,9 +3,9 @@
  ![IRKAT](http://i.imgur.com/xKn2oFy.png?1)
 
 
-##PROJECT 1##
+## PROJECT 1
 
-#*PENALTY KICKS!*#
+# *PENALTY KICKS!*
 ![SOCCER TIME](http://i.imgur.com/HRtaR8f.jpg)
 
 *******************************************************************************
@@ -15,14 +15,14 @@
 
 
 
-#INSTALLATION  INSTRUCTIONS#
+# INSTALLATION  INSTRUCTIONS
 - Clone the Repository file
 - Click the link on the game GitHub to open in your browser.
   
   <br>
   <br>
   
-#APPROACH#
+# APPROACH
 
 As a student of the WDI program at General Assembly, I have had the privilege of learning new skills that, besides teaching me the technical aspects of web development, have also helped me to see things from a different perspective when it comes to problem solving.
 
@@ -31,7 +31,7 @@ This first project, Penalty Kicks, fulfills the minimum requirements in full (MV
 In order to create a successful game, I focused mainly on the game logic, which states that a player has to release the ball during a specific time frame in order to score a goal. Using HTML, CSS, Javascript, Jquery and GarageBand - among other softwares - I was able to build a game that I hope you will enjoy!
 
 <br>
-#WIREFRAME#
+# WIREFRAME
 <br>
 
 <br>
@@ -53,7 +53,7 @@ In order to create a successful game, I focused mainly on the game logic, which 
 
 
 <br>
-#USER STORIES
+# USER STORIES
 <br>
 
 **Check out our trello board**
@@ -62,7 +62,7 @@ In order to create a successful game, I focused mainly on the game logic, which 
  
  
 <br>
-#MVP
+# MVP
 <br>
 
 **The minimum project requirements are**
@@ -81,6 +81,7 @@ In order to create a successful game, I focused mainly on the game logic, which 
 <br>
 
 - Develop a player's better interaction with the ball, kick, goal and goalie
+
 - Improve the movement on the goalie by setting and x and y paramenter for each limb.
 
 - Improve background display and sound effects to create a better 'atmosphere' for
@@ -92,17 +93,22 @@ In order to create a successful game, I focused mainly on the game logic, which 
 ## TECHNOLOGIES USED
 <br>
 
-- HTML
+- HTML5
 - CSS
-- Some vanilla JavaScript and JQuery
+- JavaScript and jQuery
 - Microsoft Office
 - GarageBand
+- Trello
+- GitHub
+- Heroku
 
 
 <br>
 ## UNSOLVED PROBLEMS
 <br>
+
 - SET A MODAL WINDOW WITH MUSIC TO RESTART THE GAME
+
 - AUDIO GLITCHES
 
 <br>
