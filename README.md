@@ -1,8 +1,6 @@
-### GENERAL ASSAMBLY / WDI 43 - 2017
-
 ![Imgur](http://i.imgur.com/bTzjMVU.png)
 
-## PROJECT 1
+# PROJECT 1
 
 # *PENALTY KICKS!*
 ![SOCCER TIME](http://i.imgur.com/HRtaR8f.jpg)
