@@ -1,7 +1,6 @@
 ### GENERAL ASSAMBLY / WDI 43 - 2017
 
- ![IRKAT](http://i.imgur.com/xKn2oFy.png?1)
-
+![Imgur](http://i.imgur.com/bTzjMVU.png)
 
 ## PROJECT 1
 
