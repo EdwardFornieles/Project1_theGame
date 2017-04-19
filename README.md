@@ -1,11 +1,11 @@
-###GENERAL ASSAMBLY / WDI 43 - 2017
+### GENERAL ASSAMBLY / WDI 43 - 2017
 
  ![IRKAT](http://i.imgur.com/xKn2oFy.png?1)
 
 
-##PROJECT 1
+## PROJECT 1
 
-#*PENALTY KICKS!*
+# *PENALTY KICKS!*
 ![SOCCER TIME](http://i.imgur.com/HRtaR8f.jpg)
 
 *******************************************************************************
@@ -15,14 +15,14 @@
 
 
 
-#INSTALLATION  INSTRUCTIONS
+# INSTALLATION  INSTRUCTIONS
 - Clone the Repository file
 - Click the link on the game GitHub to open in your browser.
   
   <br>
   <br>
   
-#APPROACH
+# APPROACH
 
 As a student of the WDI program at General Assembly, I have had the privilege of learning new skills that, besides teaching me the technical aspects of web development, have also helped me to see things from a different perspective when it comes to problem solving.
 
@@ -31,7 +31,7 @@ This first project, Penalty Kicks, fulfills the minimum requirements in full (MV
 In order to create a successful game, I focused mainly on the game logic, which states that a player has to release the ball during a specific time frame in order to score a goal. Using HTML, CSS, Javascript, Jquery and GarageBand - among other softwares - I was able to build a game that I hope you will enjoy!
 
 <br>
-#WIREFRAME
+# WIREFRAME
 <br>
 
 <br>
@@ -57,7 +57,7 @@ In order to create a successful game, I focused mainly on the game logic, which 
 
 
 <br>
-#USER STORIES
+# USER STORIES
 <br>
 
 **Check out our trello board**
@@ -66,7 +66,7 @@ In order to create a successful game, I focused mainly on the game logic, which 
  
  
 <br>
-#MVP
+# MVP
 <br>
 
 **The minimum project requirements are**
@@ -81,7 +81,7 @@ In order to create a successful game, I focused mainly on the game logic, which 
   - Inform when a **player wins** the game and **reset** the game
 
 <br>
-##STRECTCH GOALS
+## STRECTCH GOALS
 <br>
 
 - Develop a player's better interaction with the ball, kick, goal and goalie
@@ -94,7 +94,7 @@ In order to create a successful game, I focused mainly on the game logic, which 
 - Allow the player use the keeper to save a shot
 
 <br>
-##TECHNOLOGIES USED
+## TECHNOLOGIES USED
 <br>
 
 - HTML5
@@ -108,7 +108,7 @@ In order to create a successful game, I focused mainly on the game logic, which 
 
 
 <br>
-##UNSOLVED PROBLEMS
+## UNSOLVED PROBLEMS
 <br>
 
 - SET A MODAL WINDOW WITH MUSIC TO RESTART THE GAME
@@ -116,7 +116,7 @@ In order to create a successful game, I focused mainly on the game logic, which 
 - AUDIO GLITCHES
 
 <br>
-###EXTRAS
+### EXTRAS
 <br>
 
  *FOR MORE INFO https://en.wikipedia.org/wiki/Penalty_kick_(association_football)*
