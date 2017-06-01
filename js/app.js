@@ -7,7 +7,9 @@ var intro       = new Audio('Media/Audio/intro.mp3')
 var retry       = new Audio('Media/Audio/retry.mp3')
 
 
-$(document).ready(function() { intro.play()
+$(document).ready(function() {
+    intro.play()
+    soundControl()
 
   ////////////////////////////////////////
   ////****    GLOBAL VARIABLES    ****////
@@ -41,6 +43,7 @@ $(document).ready(function() { intro.play()
   window.onload = function() {
     $('#button').click(function() {
       $('#modal').css('display', 'none')
+      if ($('#audio').hasClass('unmuted')){
       intro.pause()
       retry.pause()
       crowd.play()
@@ -51,6 +54,13 @@ $(document).ready(function() { intro.play()
        crowd2.onended = function(){
          this.play()
        }
+     } else {
+       intro.pause()
+       crowd.pause()
+       crowd2.pause()
+       goalSound.pause()
+       missedSound.pause()
+     }
       newShot()
     })
   }
@@ -150,7 +160,7 @@ $(document).ready(function() { intro.play()
   }
 
   function winner() {
-    if (player2.attemptNum === 5) {
+    if (player2.attemptNum === 5 || (player2.attemptNum === 3 && ((player1.score - player2.score < 0) || (player2.score - player1.score < 0)))) {
       if (player1.score > player2.score) {
         return player1.team + " Wins the game!"
       } else if (player1.score < player2.score) {
@@ -178,9 +188,26 @@ $(document).ready(function() { intro.play()
         alert('Thank you for playing')
     }
   }
-
-
-
+  
+function soundControl() {
+  $('#audio').on("click", function() {
+    console.log('here')
+    if ($('#audio').hasClass("unmuted")) {
+      console.log($('#audio').class)
+      crowd.pause()
+      crowd2.pause()
+      goalSound.pause()
+      missedSound.pause()
+      $('#audio').removeClass('unmuted').addClass('muted')
+    } else {
+      $('#audio').removeClass('muted').addClass('unmuted')
+      crowd.play()
+      crowd2.play()
+      // goalSound.play()
+      // missedSound.play()
+    }
+  })
+}
 //possible F(X) to add sound // STRETCH
 //   function goalSound(elem, path) {
 //   $('<source>').attr('src', path).appendTo(elem);

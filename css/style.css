@@ -86,6 +86,10 @@
   background: rgba(255, 0, 0, 0.9);
 }
 
+#audio {
+  background: red;
+}
+
 #player {
   background-image: url();
 }
@@ -200,6 +204,17 @@
   height: 100%;
   width: 100%;
 }
+#restartModal {
+  position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgba(255, 255, 255, 0.8) top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 1);
+  z-index: 99999;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
 .modalconent {
   position: absolute;
   color: aliceblue;
@@ -238,6 +253,161 @@
   padding-top: 1px;
 }
 /*******************************************/
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 872px) {
   /*******************************************/
+
+  .field {
+    position: relative;
+    background-image: url(http://i.imgur.com/A8foSNC.png);
+    background-size: cover;
+    margin-left: 0;
+    height: 100%;
+    width: 100%;
+  }
+  #ball {
+    width: 33px;
+    position: absolute;
+    bottom: 175px;
+    margin-left: -7%;
+    margin-bottom: -20%;
+    transform: scale(1) translate(0px, 0px);
+    background-color: rgba(255, 255, 255, 0);
+  }
+
+  .ballLeft, .ballOut, .ballCatched {
+    transition: all 0.8s;
+    opacity: 60%;
+  }
+
+  .ballLeft {
+    transform: scale(.3) translate(370px, -390px)!important;
+    /*transition: all 0.8s;
+    opacity: 60%;*/
+  }
+
+  .ballOut {
+    transform: scale(.3) translate(-400px, -900px)!important;
+    /*transition: all 0.8s;
+    opacity: 60%;*/
+  }
+
+  .ballCatched {
+    transform: scale(.4) translate(-240px, -180px)!important;
+
+    /*transition: all 0.8s;
+    opacity: 60%;*/
+  }
+
+  #goalkeeper {
+    position: absolute;
+    left: 44%;
+    display: block;
+    width: 80px;
+    bottom: 45px;
+    transform: scale(1) translate(0px, 0px);
+    background-color: rgba(255, 255, 255, 0);
+  }
+
+  .keeperMissed {
+    transform: scale(1) translate(20px, 0px)!important;
+    transition: all 0.8s;
+    opacity: 60%;
+  }
+
+  .keeperCatched {
+    transform: scale(1) translate(-109px, 0px)!important;
+    transition: all 0.8s;
+    opacity: 60%;
+  }
+
+  .playing {
+    position: relative;
+    font: caption;
+    color: aliceblue;
+    opacity: 100;
+    height: 20px;
+    width: 230px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: aliceblue 1px solid;
+    border-radius: 5px;
+    left: 2%;
+    bottom: 50px;
+    text-align: center;
+    padding-top: 1px;
+  }
+  .teamsScore {
+    font-size: 10px;
+    border: 1px solid rgba(200, 200, 100, 0.6);
+    background-color: rgba(0, 0, 0, 1);
+    position: relative;
+    display: inline;
+    height: 68%;
+    width: 68%;
+    min-width: 30%;
+    left: 3px;
+    top: 5px;
+    padding-left: 3px;
+    padding-right: 30px;
+    border-radius: 10px;
+  }
+  .nbr {
+    margin-left: 10px;
+  }
+  .pop {
+    position: relative;
+    font: caption;
+    color: yellow;
+    opacity: 100;
+    height: 20px;
+    width: 230px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: yellow 1px solid;
+    border-radius: 5px;
+    left: 2%;
+    bottom: 18%;
+    text-align: center;
+    padding-top: 1px;
+  }
+  #notGoal.pop {
+    color: rgba(255, 0, 0, 1);
+    border: 1px rgba(255, 0, 0, 1) solid;
+    bottom: 0%;
+  }
+  #goal.pop {
+    color: rgba(0, 255, 0, 1);
+    border: 1px rgba(0, 255, 0, 1) solid;
+    bottom: 18%;
+  }
+  #modal {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(255, 255, 255, 0.8) top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 1);
+    z-index: 99999;
+    height: 100%;
+    width: 100%;
+  }
+
+}
+  /*******************************************/
+  @media screen and (max-width: 550px) {
+  /*******************************************/
+
+  html {
+    content: 'NOT YET AVAILABLE FOR MOBILE';
+  }
+
+  .field {
+    position: relative;
+    background-image: url(http://i.imgur.com/Ka8lJHj.png);
+    background-size: 100%;
+    margin-left: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  #scoreBoard, #audio, .playerScore, #button, .playing, .scoreDisplay, #timer, #shot, .pop, #modal, #goalkeeper, #ball, #teamsScore, .attempt {
+    display: none;
+  }
 }
