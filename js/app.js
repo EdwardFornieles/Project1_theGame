@@ -1,10 +1,10 @@
 //AUDIO FILES, HERE TO RENDER BETTER
-var goalSound = new Audio('Media/Audio/goalSound.mp3')
-var crowd = new Audio('Media/Audio/crowd.mp3')
-var crowd2 = new Audio('Media/Audio/crowd2.mp3')
+var goalSound   = new Audio('Media/Audio/goalSound.mp3')
+var crowd       = new Audio('Media/Audio/crowd.mp3')
+var crowd2      = new Audio('Media/Audio/crowd2.mp3')
 var missedSound = new Audio('Media/Audio/missed.mp3')
-var intro = new Audio('Media/Audio/intro.mp3')
-var retry = new Audio('Media/Audio/retry.mp3')
+var intro       = new Audio('Media/Audio/intro.mp3')
+var retry       = new Audio('Media/Audio/retry.mp3')
 
 
 $(document).ready(function() { intro.play()
@@ -37,6 +37,7 @@ $(document).ready(function() { intro.play()
   ////////////////////////////////////////
   ////****       FUNCTIONS       *****////
   ////////////////////////////////////////
+
   window.onload = function() {
     $('#button').click(function() {
       $('#modal').css('display', 'none')
