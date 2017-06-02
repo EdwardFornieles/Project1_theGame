@@ -109,7 +109,9 @@ $(document).ready(function() {
         $('#notGoal').addClass('pop')
         $('#ball').addClass('ballCatched')
         $('#goalkeeper').addClass('keeperCatched')
+        if ($('#audio').hasClass('unmuted')){
         missedSound.play()
+        }
           turn++
       } else {
         currentPlayer.score += 1
@@ -118,23 +120,16 @@ $(document).ready(function() {
         $('#ball').addClass('ballLeft')
         $('#goalkeeper').addClass('keeperMissed')
         $('#goal').addClass('pop')
+        if ($('#audio').hasClass('unmuted')){
         goalSound.play()
+        }
           turn++
         setTimeout(newShot, 4000)
       }
       $('#homeScore').text(player1.score)
       $('#awayScore').text(player2.score)
-      if (player2.attemptNum === 5||(player2.attemptNum === 3 && ((player1.score - player2.score < -2) || (player2.score - player1.score < -2)))||(player2.attemptNum === 4 && ((player1.score - player2.score < 2) || (player2.score - player1.score < 2)))) {
-        if (player1.score === player2.score) {
-          console.log("it's a tie")
-        } else if (player1.score > player2.score) {
-          console.log('Home Wins!')
-        } else {
-          console.log('Away Wins!')
-        }
-        scoreBoard = (player1.team + ' ' + player1.score + ' ' + player2.team + ' ' + player2.score)
+      if (winner()) {
         setTimeout(restart, 1000)
-
       }
     }
   }
@@ -165,12 +160,14 @@ $(document).ready(function() {
   }
 
   function winner() {
+    if (player2.attemptNum === 5||(player2.attemptNum === 3 && ((player1.score - player2.score < -2) || (player2.score - player1.score < -2)))||(player2.attemptNum === 4 && ((player1.score - player2.score < 2) || (player2.score - player1.score < 2)))) {
       if (player1.score > player2.score) {
-        return player1.team + " Wins the game!"
+        return player1.team + " wins the game!"
       } else if (player1.score < player2.score) {
-        return player2.team + " Wins the game!"
+        return player2.team + " wins the game!"
       } else {
         return "It's a Tie!"
+      }
     }
   }
 
