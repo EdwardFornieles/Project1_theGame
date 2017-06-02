@@ -61,11 +61,16 @@
   height: 50%;
   width: 98%;
   min-width: 30%;
+  max-width: 48%;
   left: 3px;
   top: 5px;
   padding-left: 3px;
   padding-right: 30px;
   border-radius: 10px;
+}
+
+.nbr {
+  margin-left: 15%;
 }
 
 .attempt {

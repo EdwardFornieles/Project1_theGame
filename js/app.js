@@ -9,7 +9,7 @@ var retry       = new Audio('Media/Audio/retry.mp3')
 
 $(document).ready(function() {
     intro.play()
-    soundControl()
+
 
   ////////////////////////////////////////
   ////****    GLOBAL VARIABLES    ****////
@@ -33,7 +33,7 @@ $(document).ready(function() {
     // scoreBoard: $('#player2Score')
   }
   var kicked = false
-  var result = (($kick.height() / $timer.height()) * 100)
+  // var result = (($kick.height() / $timer.height()) * 100)
   var currentPlayer = whoseTurn();
 
   ////////////////////////////////////////
@@ -41,7 +41,12 @@ $(document).ready(function() {
   ////////////////////////////////////////
 
   window.onload = function() {
-    $('#button').click(function() {
+      player1.team = prompt('What is your team?')
+      player2.team = prompt('Welcome '+ player1.team + ' who are you playing against?')
+      $('#home').text(player1.team)
+      $('#away').text(player2.team)
+      soundControl()
+      $('#button').click(function() {
       $('#modal').css('display', 'none')
       if ($('#audio').hasClass('unmuted')){
       intro.pause()
@@ -119,7 +124,7 @@ $(document).ready(function() {
       }
       $('#homeScore').text(player1.score)
       $('#awayScore').text(player2.score)
-      if (player2.attemptNum === 5) {
+      if (player2.attemptNum === 5||(player2.attemptNum === 3 && ((player1.score - player2.score < -2) || (player2.score - player1.score < -2)))||(player2.attemptNum === 4 && ((player1.score - player2.score < 2) || (player2.score - player1.score < 2)))) {
         if (player1.score === player2.score) {
           console.log("it's a tie")
         } else if (player1.score > player2.score) {
@@ -160,14 +165,12 @@ $(document).ready(function() {
   }
 
   function winner() {
-    if (player2.attemptNum === 5 || (player2.attemptNum === 3 && ((player1.score - player2.score < 0) || (player2.score - player1.score < 0)))) {
       if (player1.score > player2.score) {
         return player1.team + " Wins the game!"
       } else if (player1.score < player2.score) {
         return player2.team + " Wins the game!"
       } else {
         return "It's a Tie!"
-      }
     }
   }
 
@@ -188,7 +191,7 @@ $(document).ready(function() {
         alert('Thank you for playing')
     }
   }
-  
+
 function soundControl() {
   $('#audio').on("click", function() {
     console.log('here')

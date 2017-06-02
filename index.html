@@ -1,5 +1,6 @@
-     <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="./css/style.css">
@@ -7,6 +8,7 @@
   <script src="./js/app.js"></script>
   <title>PENALTY KICKS!</title>
 </head>
+
 <body>
   <div id="modal">
     <div class="modalconent">
@@ -36,13 +38,12 @@
       </div>
     </div>
     <div class='scoreDisplay'>
-      <span class='teamsScore'>HOME   <span class="nbr" id="homeScore">0</span></span>
-      <span class='teamsScore'>AWAY   <span class="nbr" id="awayScore">0</span></span>
+      <span class='teamsScore'><span id='home'>HOME</span><span class="nbr" id="homeScore">0</span></span>
+      <span class='teamsScore'><span id='away'>AWAY</span><span class="nbr" id="awayScore">0</span></span>
     </div>
     <br>
     <div id="timer">
-      <div id="shot">
-      </div>
+      <div id="shot"></div>
     </div>
     <img src='http://i.imgur.com/LyE9VFU.png' id='goalkeeper'>
     <div id="player"></div>
@@ -50,7 +51,7 @@
     <div class='hide' id='onGameFeed'>Too high! You missed your shot!</div>
     <div class='hide' id='goal'>GOAL!</div>
     <div class='hide' id='notGoal'>You missed!</div>
-    <div class='hide'id='playerOn'></div>
+    <div class='hide' id='playerOn'></div>
   </div>
 </body>
 
