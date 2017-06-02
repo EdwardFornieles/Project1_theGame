@@ -43,6 +43,10 @@ $(document).ready(function() {
   window.onload = function() {
       player1.team = prompt('What is your team?')
       player2.team = prompt('Welcome '+ player1.team + ' who are you playing against?')
+      if (player1.team == player2.team){
+        alert (player1.team + ' has already been chosen, please select another team')
+        player2.team = prompt('What team will play agaisnt '+ player1.team)
+      }
       $('#home').text(player1.team)
       $('#away').text(player2.team)
       soundControl()
@@ -74,8 +78,8 @@ $(document).ready(function() {
   console.log('running')
 
 
-  function keyPressed() {
-
+  function keyPressed(e) {
+    e.stopPropagation()
     if (kicked === false) {
       ($kick).animate({
         height: '100%'
@@ -85,7 +89,9 @@ $(document).ready(function() {
         $('#onGameFeed').addClass('pop')
         $('#playerOn').removeClass('playing')
         $('#ball').addClass('ballOut')
+        if ($('#audio').hasClass('unmuted')){
         missedSound.play()
+        }
         setTimeout(newShot, 4000)
         $("#" + currentPlayer.attempts[currentPlayer.attemptNum]).addClass('missed');
         currentPlayer.attemptNum++
@@ -95,7 +101,8 @@ $(document).ready(function() {
     }
   }
 
-  function keyReleased() {
+  function keyReleased(e) {
+    e.stopPropagation()
     if (kicked === true) {
       ($kick).stop()
       $('#playerOn').removeClass('playing')
@@ -189,56 +196,27 @@ $(document).ready(function() {
     }
   }
 
-function soundControl() {
-  $('#audio').on("click", function() {
-    console.log('here')
-    if ($('#audio').hasClass("unmuted")) {
-      console.log($('#audio').class)
-      crowd.pause()
-      crowd2.pause()
-      goalSound.pause()
-      missedSound.pause()
-      $('#audio').removeClass('unmuted').addClass('muted')
-    } else {
-      $('#audio').removeClass('muted').addClass('unmuted')
-      crowd.play()
-      crowd2.play()
-      // goalSound.play()
-      // missedSound.play()
-    }
+function soundControl(e) {
+  $('#audio').prop('type', 'button')
+  $('#audio').click(function(e) {
+    e.preventDefault()
+      if ($(e.target).is('#audio')) {
+        if ($('#audio').hasClass("unmuted")) {
+          crowd.pause()
+          crowd2.pause()
+          goalSound.pause()
+          missedSound.pause()
+          $('#audio').removeClass('unmuted').addClass('muted')
+        } else {
+          $('#audio').removeClass('muted').addClass('unmuted')
+          crowd.play()
+          crowd2.play()
+        }
+      }
   })
 }
-//possible F(X) to add sound // STRETCH
-//   function goalSound(elem, path) {
-//   $('<source>').attr('src', path).appendTo(elem);
-// }
-//
-// $(".goal").mouseenter(function(){
-//      var audio = $('<audio />', {
-//        autoPlay : 'autoplay'
-//      });
-//      addSource(audio, 'audio/'+Math.ceil(Math.random() * 5)+'.mp3');
-//      addSource(audio, 'audio/'+Math.ceil(Math.random() * 5)+'.ogg');
-//      audio.appendTo('body');
-// });
-
-
-
   // function onTie() {
   //
   // }
 
-
-  // function itsAGoal(){
-  //   if(player1.score !==0 && player2.score)
-  // }
-  // function moveGoalie(){
-  //     var x = 0;
-  //     setInterval(function(){
-  //         x-=1;
-  //         $('#goalkeeper').css('left', x + 'px 10');
-  //     }, 10);
-  // })
-  // moveGoalie()
-  //
 })
