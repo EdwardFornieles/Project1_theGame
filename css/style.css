@@ -160,6 +160,9 @@
   background-color: rgba(255, 255, 255, 0)
 }
 
+.inputName {
+  background-color: white;
+}
 .keeperMissed {
   transform: scale(1) translate(-230px, 0px)!important;
   transition: all 0.8s;
